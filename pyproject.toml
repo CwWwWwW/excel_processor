@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "excel-processor"
+version = "1.0.0"
+description = "Local Windows desktop Excel processing system with COM fidelity and transactional output."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7",
+  "PySide6>=6.7",
+  "pywin32>=306; platform_system == 'Windows'",
+  "openpyxl>=3.1",
+  "pandas>=2.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+build = ["pyinstaller>=6"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*", "ui*", "contracts*", "discovery*", "compiler*", "scheduler*", "engines*", "operations*", "transaction*", "validation*", "storage*", "workers*"]
+exclude = ["runtime*", "build*", "resources*", "tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

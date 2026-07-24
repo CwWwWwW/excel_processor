@@ -1,0 +1,12 @@
+﻿__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+runtime/database/*.db
+runtime/database/*.db-*
+runtime/jobs/
+runtime/logs/
+runtime/crash_recovery/
+dist/
+*.spec.backup
