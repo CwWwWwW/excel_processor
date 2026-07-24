@@ -2,10 +2,11 @@ from __future__ import annotations
 from typing import Any
 from uuid import UUID, uuid4
 from pydantic import BaseModel, ConfigDict, Field
+from excel_processor.version import CONTRACTS_SCHEMA_VERSION
 from .job import EngineMode, ErrorPolicy
 class TargetSpec(BaseModel):
     model_config = ConfigDict(frozen=True)
-    schema_version: str = "1.0"
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
     file_ids: tuple[UUID, ...] | None = None
     file_name_pattern: str | None = None
     sheet_names: tuple[str, ...] | None = None
@@ -18,19 +19,19 @@ class TargetSpec(BaseModel):
     object_chain: tuple[dict[str, Any], ...] = ()
 class ConditionExpr(BaseModel):
     model_config = ConfigDict(frozen=True)
-    schema_version: str = "1.0"
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
     operator: str
     field: str | None = None
     value: Any = None
     children: tuple["ConditionExpr", ...] = ()
 class ValidationSpec(BaseModel):
     model_config = ConfigDict(frozen=True)
-    schema_version: str = "1.0"
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
     validator: str
     parameters: dict[str, Any] = Field(default_factory=dict)
 class OperationSpec(BaseModel):
     model_config = ConfigDict(frozen=True)
-    schema_version: str = "1.0"
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
     operation_id: UUID = Field(default_factory=uuid4)
     opcode: str
     target: TargetSpec

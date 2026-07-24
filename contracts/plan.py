@@ -3,20 +3,23 @@ from pathlib import Path
 from typing import Any
 from uuid import UUID, uuid4
 from pydantic import BaseModel, ConfigDict, Field, field_serializer
+from excel_processor.version import CONTRACTS_SCHEMA_VERSION
+from .capability import EngineDecision
 from .job import EngineMode
 from .operation import OperationSpec
 class PlannedOperation(BaseModel):
     model_config = ConfigDict(frozen=True)
-    schema_version: str = "1.0"
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
     command: OperationSpec
     resolved_file_ids: tuple[UUID, ...]
     resolved_sheets: tuple[str, ...] = ()
-    selected_engine: EngineMode
+    selected_engine: EngineMode | None = None
+    engine_decision: EngineDecision | None = None
     dependency_ids: tuple[UUID, ...] = ()
     estimated_changes: int = 0
 class ExecutionPlan(BaseModel):
     model_config = ConfigDict(frozen=True)
-    schema_version: str = "1.0"
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
     job_id: UUID
     capability_hash: str
     workbook_snapshot_hashes: dict[UUID, str] = Field(default_factory=dict)
@@ -24,7 +27,7 @@ class ExecutionPlan(BaseModel):
     warnings: tuple[str, ...] = ()
 class OperationCommand(BaseModel):
     model_config = ConfigDict(frozen=True)
-    schema_version: str = "1.0"
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
     command_id: UUID = Field(default_factory=uuid4)
     job_id: UUID
     operation: OperationSpec
@@ -37,7 +40,7 @@ class OperationCommand(BaseModel):
     def _sp(self, v: Path | None) -> str | None: return None if v is None else str(v)
 class ExecutionContext(BaseModel):
     model_config = ConfigDict(frozen=True)
-    schema_version: str = "1.0"
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
     job_id: UUID
     runtime_root: Path
     capability: dict[str, Any] = Field(default_factory=dict)

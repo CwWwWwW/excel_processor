@@ -1,8 +1,6 @@
-# Excel Processor v1.0.0
+# Excel Processor v1.0.1
 
-A local Windows desktop Excel processing framework built around PySide6, Python 3.11, Microsoft Excel COM automation, openpyxl, pandas, and SQLite.
-
-The application never modifies source files directly. Jobs are prepared in a runtime workspace, written to candidate artifacts, validated, and only then atomically committed to the selected output directory.
+Pure local Windows Excel processing application framework with transactional output, Excel COM fidelity, OpenXML/CSV limited mode, SQLite persistence, and offline packaging scripts.
 
 ## Quick checks
 
@@ -11,4 +9,4 @@ python -m pytest
 python -m app.main --self-check
 ```
 
-Target remote: `https://github.com/CwWwWwW/excel_processor.git`.
+Runtime data is written to `%LOCALAPPDATA%\ExcelProcessor\` by default, or `portable_data/` in portable mode. Source Excel files are never modified directly.

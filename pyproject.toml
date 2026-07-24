@@ -1,28 +1,32 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "excel-processor"
-version = "1.0.0"
+version = "1.0.1"
 description = "Local Windows desktop Excel processing system with COM fidelity and transactional output."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.8,<3.12"
 dependencies = [
-  "pydantic>=2.7",
-  "PySide6>=6.7",
-  "pywin32>=306; platform_system == 'Windows'",
-  "openpyxl>=3.1",
-  "pandas>=2.2",
+  "pydantic==2.11.7",
+  "PySide6==6.7.3; python_version >= '3.11'",
+  "PySide2==5.15.2.1; python_version < '3.11'",
+  "pywin32==306; platform_system == 'Windows'",
+  "openpyxl==3.1.5",
+  "pandas==2.2.2; python_version >= '3.11'",
+  "numpy==1.26.4; python_version >= '3.11'",
+  "pandas==1.5.3; python_version < '3.11'",
+  "numpy==1.23.5; python_version < '3.11'",
 ]
 
 [project.optional-dependencies]
-test = ["pytest>=8"]
-build = ["pyinstaller>=6"]
+test = ["pytest==8.4.1"]
+build = ["pyinstaller==6.14.2"]
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["app*", "ui*", "contracts*", "discovery*", "compiler*", "scheduler*", "engines*", "operations*", "transaction*", "validation*", "storage*", "workers*"]
+include = ["excel_processor*", "app*", "ui*", "contracts*", "discovery*", "compiler*", "scheduler*", "engines*", "operations*", "transaction*", "validation*", "storage*", "workers*"]
 exclude = ["runtime*", "build*", "resources*", "tests*"]
 
 [tool.pytest.ini_options]
