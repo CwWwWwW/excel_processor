@@ -1,4 +1,4 @@
-﻿# PyInstaller entry specification for the desktop application.
+# PyInstaller entry specification for the desktop application.
 block_cipher = None
 
 a = Analysis(['app/main.py'], pathex=[], binaries=[], datas=[('resources', 'resources')], hiddenimports=[], hookspath=[], hooksconfig={}, runtime_hooks=[], excludes=[], win_no_prefer_redirects=False, win_private_assemblies=False, cipher=block_cipher, noarchive=False)

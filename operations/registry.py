@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from typing import Protocol
 from contracts.capability import CapabilityProfile
 from contracts.plan import ExecutionContext, OperationCommand

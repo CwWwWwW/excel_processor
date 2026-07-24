@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import platform as _platform
 from pathlib import Path
 from typing import Any

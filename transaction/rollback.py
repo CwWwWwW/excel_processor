@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import shutil
 from pathlib import Path
 def reject_candidate(candidate: Path, rejected_dir: Path) -> Path:

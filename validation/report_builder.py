@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from uuid import UUID
 from contracts.result import VerificationReport, VerificationStatus
 from .file_validator import validate_file_basic

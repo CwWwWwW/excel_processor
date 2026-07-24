@@ -1,4 +1,4 @@
-﻿import pytest
+import pytest
 from contracts.state import JobState, assert_transition
 
 def test_running_cannot_commit_directly():

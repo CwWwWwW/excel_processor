@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import logging
 from pathlib import Path
 from storage.database import Database

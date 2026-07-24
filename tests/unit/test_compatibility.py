@@ -1,4 +1,4 @@
-﻿from discovery.typelib_scanner import enumerate_file_formats
+from discovery.typelib_scanner import enumerate_file_formats
 from validation.compatibility_validator import conversion_loss_warnings
 
 def test_vba_xlsx_warning():

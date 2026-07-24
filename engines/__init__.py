@@ -1,2 +1,2 @@
-﻿from .router import EngineRouter
+from .router import EngineRouter
 __all__ = ["EngineRouter"]

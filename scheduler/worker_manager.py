@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from contracts.capability import CapabilityProfile
 def choose_excel_worker(capability: CapabilityProfile) -> str:
     bitness=(capability.excel.bitness or capability.excel.platform or "").lower()

@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import json
 from contracts.job import JobSpec
 from contracts.state import JobState

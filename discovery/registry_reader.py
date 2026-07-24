@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import platform
 C2R_PATH = r"SOFTWARE\Microsoft\Office\ClickToRun\Configuration"
 def read_registry_value(path: str, name: str) -> str | None:

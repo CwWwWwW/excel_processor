@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from dataclasses import dataclass
 from contracts.capability import CapabilityProfile
 from contracts.job import EngineMode

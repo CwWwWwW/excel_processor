@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import fnmatch
 from contracts.job import FileSpec
 from contracts.operation import TargetSpec

@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from contracts.capability import FileFormatCapability
 def conversion_loss_warnings(has_vba: bool, sheet_count: int, target_format: FileFormatCapability) -> tuple[str,...]:
     warnings=[]

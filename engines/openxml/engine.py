@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import shutil, time
 from contracts.job import EngineMode
 from contracts.plan import ExecutionContext, OperationCommand

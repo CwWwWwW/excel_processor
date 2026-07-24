@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from discovery.excel_detector import build_capability_profile
 from .pages import PAGE_NAMES
 def run_app() -> int:

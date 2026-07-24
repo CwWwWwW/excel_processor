@@ -1,2 +1,2 @@
-﻿from .engine import OpenXmlEngine
+from .engine import OpenXmlEngine
 __all__ = ["OpenXmlEngine"]

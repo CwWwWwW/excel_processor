@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from typing import Hashable, Iterable
 def uniqueness_errors(values: Iterable[Hashable], field_name: str) -> tuple[str,...]:
     seen=set(); dup=set()

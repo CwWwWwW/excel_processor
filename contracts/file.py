@@ -1,2 +1,2 @@
-﻿from .job import FileSpec
+from .job import FileSpec
 __all__ = ["FileSpec"]

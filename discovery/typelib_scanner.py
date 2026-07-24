@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from contracts.capability import FileFormatCapability
 FALLBACK_FORMATS = (
     FileFormatCapability(menu_name="保持源格式", extension="", file_format=None, category="workbook", can_preserve_vba=True),

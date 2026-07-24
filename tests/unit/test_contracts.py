@@ -1,4 +1,4 @@
-﻿from pathlib import Path
+from pathlib import Path
 from contracts import Envelope, FileSpec, JobSpec, OperationSpec, OutputSpec, TargetSpec
 
 def test_contracts_roundtrip_and_password_redaction():

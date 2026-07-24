@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from pathlib import Path
 from typing import Any
 XL_CALCULATION_MANUAL=-4135; MSO_AUTOMATION_SECURITY_FORCE_DISABLE=3

@@ -1,4 +1,4 @@
-﻿from .envelope import Envelope
+from .envelope import Envelope
 from .job import ErrorPolicy, EngineMode, FileSpec, JobSpec, OutputSpec
 from .operation import ConditionExpr, OperationSpec, TargetSpec, ValidationSpec
 from .capability import CapabilityProfile, ExcelInstallation, FileFormatCapability

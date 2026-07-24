@@ -1,2 +1,2 @@
-﻿from .jobs import JobRepository
+from .jobs import JobRepository
 __all__ = ["JobRepository"]

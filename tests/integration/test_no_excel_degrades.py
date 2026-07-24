@@ -1,4 +1,4 @@
-﻿from discovery.excel_detector import build_capability_profile
+from discovery.excel_detector import build_capability_profile
 from scheduler.worker_manager import choose_excel_worker
 
 def test_capability_profile_is_always_available():

@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import hashlib, zipfile
 from pathlib import Path
 from typing import Iterable

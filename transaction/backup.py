@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import shutil
 from pathlib import Path
 def create_backup(source: Path, backup_path: Path) -> Path:

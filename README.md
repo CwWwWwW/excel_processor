@@ -1,4 +1,4 @@
-﻿# Excel Processor v1.0.0
+# Excel Processor v1.0.0
 
 A local Windows desktop Excel processing framework built around PySide6, Python 3.11, Microsoft Excel COM automation, openpyxl, pandas, and SQLite.
 

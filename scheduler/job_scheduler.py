@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from pathlib import Path
 from contracts.job import EngineMode, JobSpec
 from contracts.plan import ExecutionContext, OperationCommand

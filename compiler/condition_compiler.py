@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from typing import Any
 from contracts.operation import ConditionExpr
 def evaluate_condition(condition: ConditionExpr | None, row: dict[str, Any]) -> bool:

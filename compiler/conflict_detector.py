@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 from contracts.operation import OperationSpec
 def detect_conflicts(operations: tuple[OperationSpec,...]) -> tuple[str,...]:
     warnings=[]; structural_seen=False

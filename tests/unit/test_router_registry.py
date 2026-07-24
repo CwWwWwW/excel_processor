@@ -1,4 +1,4 @@
-﻿import pytest
+import pytest
 from contracts.capability import CapabilityProfile
 from contracts.job import EngineMode
 from contracts.operation import OperationSpec, TargetSpec

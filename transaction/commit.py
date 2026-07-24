@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 import os, shutil
 from pathlib import Path
 def atomic_commit(candidate: Path, final_path: Path) -> None:
