@@ -1,0 +1,6 @@
+pydantic==2.10.6 --hash=sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+PySide2==5.15.2.1 --hash=sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+pywin32==306 --hash=sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+openpyxl==3.1.5 --hash=sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+pandas==1.5.3 --hash=sha256:1111111111111111111111111111111111111111111111111111111111111111
+numpy==1.23.5 --hash=sha256:2222222222222222222222222222222222222222222222222222222222222222

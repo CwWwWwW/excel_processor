@@ -1,0 +1,232 @@
+[
+  {
+    "opcode": "SET_VALUE",
+    "chinese_name": "???",
+    "implemented": true,
+    "handler": "operations.builtin.EngineBackedHandler",
+    "parameter_schema": "value/address",
+    "target_schema": "TargetSpec.address",
+    "engines": [
+      "hybrid",
+      "openxml",
+      "excel_com"
+    ],
+    "formats": [
+      "xlsx",
+      "xlsm",
+      "xltx",
+      "xltm",
+      "xlsb",
+      "xls"
+    ],
+    "minimum_excel": "2007",
+    "required_members": [
+      "Range",
+      "Value2"
+    ],
+    "required_addins": [],
+    "required_permissions": [],
+    "preserves_vba": true,
+    "fidelity_level": "high",
+    "validators": [
+      "L1",
+      "L2",
+      "L3"
+    ],
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ]
+  },
+  {
+    "opcode": "DELETE_ROWS",
+    "chinese_name": "???",
+    "implemented": true,
+    "handler": "operations.builtin.EngineBackedHandler",
+    "parameter_schema": "idx/amount or rows",
+    "target_schema": "TargetSpec.sheet_names",
+    "engines": [
+      "openxml",
+      "excel_com"
+    ],
+    "formats": [
+      "xlsx",
+      "xlsm",
+      "xltx",
+      "xltm"
+    ],
+    "minimum_excel": "2007",
+    "required_members": [
+      "Rows",
+      "Delete"
+    ],
+    "required_addins": [],
+    "required_permissions": [],
+    "preserves_vba": true,
+    "fidelity_level": "medium",
+    "validators": [
+      "L1",
+      "L2"
+    ],
+    "tests": [
+      "tests/integration/test_transaction_scheduler.py"
+    ]
+  },
+  {
+    "opcode": "DEDUP_DATA",
+    "chinese_name": "??????",
+    "implemented": true,
+    "handler": "operations.builtin.EngineBackedHandler",
+    "parameter_schema": "subset/header",
+    "target_schema": "TargetSpec.sheet_names",
+    "engines": [
+      "dataframe",
+      "openxml-writeback"
+    ],
+    "formats": [
+      "xlsx",
+      "xlsm"
+    ],
+    "minimum_excel": "2007",
+    "required_members": [],
+    "required_addins": [],
+    "required_permissions": [],
+    "preserves_vba": true,
+    "fidelity_level": "medium",
+    "validators": [
+      "L1",
+      "L2",
+      "L4"
+    ],
+    "tests": [
+      "tests/integration/test_dataframe_non_destructive.py"
+    ]
+  },
+  {
+    "opcode": "SAVE_AS",
+    "chinese_name": "???/????",
+    "implemented": true,
+    "handler": "operations.builtin.EngineBackedHandler",
+    "parameter_schema": "file_format",
+    "target_schema": "OutputSpec",
+    "engines": [
+      "excel_com"
+    ],
+    "formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls",
+      "csv",
+      "pdf",
+      "xps"
+    ],
+    "minimum_excel": "2007",
+    "required_members": [
+      "SaveAs"
+    ],
+    "required_addins": [],
+    "required_permissions": [
+      "excel_com"
+    ],
+    "preserves_vba": false,
+    "fidelity_level": "high-with-excel",
+    "validators": [
+      "L1",
+      "L3",
+      "L6"
+    ],
+    "tests": [
+      "tests/unit/test_engine_decision.py"
+    ]
+  },
+  {
+    "opcode": "COM_GET",
+    "chinese_name": "?? COM ????",
+    "implemented": true,
+    "handler": "operations.generic_com.executor.execute_generic_com",
+    "parameter_schema": "member",
+    "target_schema": "TargetSpec.object_chain",
+    "engines": [
+      "excel_com"
+    ],
+    "formats": [
+      "all-excel-com"
+    ],
+    "minimum_excel": "current member availability",
+    "required_members": [
+      "typelib whitelist"
+    ],
+    "required_addins": [],
+    "required_permissions": [
+      "advanced_com"
+    ],
+    "preserves_vba": true,
+    "fidelity_level": "current-typelib",
+    "validators": [
+      "audit"
+    ],
+    "tests": [
+      "tests/unit/test_generic_com_security.py"
+    ]
+  },
+  {
+    "opcode": "COM_SET",
+    "chinese_name": "?? COM ????",
+    "implemented": true,
+    "handler": "operations.generic_com.executor.execute_generic_com",
+    "parameter_schema": "member/value",
+    "target_schema": "TargetSpec.object_chain",
+    "engines": [
+      "excel_com"
+    ],
+    "formats": [
+      "all-excel-com"
+    ],
+    "minimum_excel": "current member availability",
+    "required_members": [
+      "typelib whitelist"
+    ],
+    "required_addins": [],
+    "required_permissions": [
+      "advanced_com"
+    ],
+    "preserves_vba": true,
+    "fidelity_level": "current-typelib",
+    "validators": [
+      "audit"
+    ],
+    "tests": [
+      "tests/unit/test_generic_com_security.py"
+    ]
+  },
+  {
+    "opcode": "COM_CALL",
+    "chinese_name": "?? COM ????",
+    "implemented": true,
+    "handler": "operations.generic_com.executor.execute_generic_com",
+    "parameter_schema": "member/arguments",
+    "target_schema": "TargetSpec.object_chain",
+    "engines": [
+      "excel_com"
+    ],
+    "formats": [
+      "all-excel-com"
+    ],
+    "minimum_excel": "current member availability",
+    "required_members": [
+      "typelib whitelist"
+    ],
+    "required_addins": [],
+    "required_permissions": [
+      "advanced_com"
+    ],
+    "preserves_vba": true,
+    "fidelity_level": "current-typelib",
+    "validators": [
+      "audit"
+    ],
+    "tests": [
+      "tests/unit/test_generic_com_security.py"
+    ]
+  }
+]

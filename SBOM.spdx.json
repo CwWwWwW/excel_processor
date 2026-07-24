@@ -1,0 +1,1098 @@
+﻿{
+    "name":  "ExcelProcessor-1.0.1",
+    "files":  [
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\.gitignore",
+                      "Length":  169
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\CHANGELOG.md",
+                      "Length":  283
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\CompatibilityMatrix.md",
+                      "Length":  619
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\KnownLimitations.md",
+                      "Length":  286
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\pyproject.toml",
+                      "Length":  1196
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\README.md",
+                      "Length":  464
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ReleaseNotes-1.0.1.md",
+                      "Length":  307
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\SBOM.spdx.json",
+                      "Length":  54940
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\SHA256SUMS.txt",
+                      "Length":  81
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\app\\bootstrap.py",
+                      "Length":  1129
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\app\\main.py",
+                      "Length":  1189
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\app\\shutdown.py",
+                      "Length":  145
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\app\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\app\\__pycache__\\bootstrap.cpython-311.pyc",
+                      "Length":  2776
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\app\\__pycache__\\main.cpython-311.pyc",
+                      "Length":  2800
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\app\\__pycache__\\shutdown.cpython-311.pyc",
+                      "Length":  536
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\app\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  160
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\build\\excel_processor.spec",
+                      "Length":  995
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\condition_compiler.py",
+                      "Length":  791
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\conflict_detector.py",
+                      "Length":  608
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\dependency_builder.py",
+                      "Length":  802
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\plan_compiler.py",
+                      "Length":  1487
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\rule_parser.py",
+                      "Length":  159
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\target_resolver.py",
+                      "Length":  526
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\__pycache__\\conflict_detector.cpython-311.pyc",
+                      "Length":  1186
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\__pycache__\\dependency_builder.cpython-311.pyc",
+                      "Length":  2491
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\__pycache__\\plan_compiler.cpython-311.pyc",
+                      "Length":  3456
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\__pycache__\\target_resolver.cpython-311.pyc",
+                      "Length":  1488
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\compiler\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  165
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\capability.py",
+                      "Length":  3239
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\envelope.py",
+                      "Length":  571
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\errors.py",
+                      "Length":  1901
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\file.py",
+                      "Length":  50
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\job.py",
+                      "Length":  1943
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\operation.py",
+                      "Length":  1861
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\plan.py",
+                      "Length":  1981
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\result.py",
+                      "Length":  2706
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\state.py",
+                      "Length":  2146
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__init__.py",
+                      "Length":  1266
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\capability.cpython-311.pyc",
+                      "Length":  6080
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\envelope.cpython-311.pyc",
+                      "Length":  1375
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\errors.cpython-311.pyc",
+                      "Length":  3634
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\file.cpython-311.pyc",
+                      "Length":  201
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\job.cpython-311.pyc",
+                      "Length":  4272
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\operation.cpython-311.pyc",
+                      "Length":  3752
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\plan.cpython-311.pyc",
+                      "Length":  4127
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\result.cpython-311.pyc",
+                      "Length":  5722
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\state.cpython-311.pyc",
+                      "Length":  3010
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\contracts\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  1735
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\excel_detector.py",
+                      "Length":  5345
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\file_scanner.py",
+                      "Length":  1747
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\platform_detector.py",
+                      "Length":  1617
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\registry_reader.py",
+                      "Length":  661
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\typelib_scanner.py",
+                      "Length":  2365
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\workbook_inspector.py",
+                      "Length":  1454
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\__pycache__\\excel_detector.cpython-311.pyc",
+                      "Length":  10224
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\__pycache__\\file_scanner.cpython-311.pyc",
+                      "Length":  5262
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\__pycache__\\platform_detector.cpython-311.pyc",
+                      "Length":  3194
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\__pycache__\\registry_reader.cpython-311.pyc",
+                      "Length":  1555
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\__pycache__\\typelib_scanner.cpython-311.pyc",
+                      "Length":  3468
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\__pycache__\\workbook_inspector.cpython-311.pyc",
+                      "Length":  3587
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\discovery\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  166
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\docs\\audits\\v1.0.0-audit.md",
+                      "Length":  6798
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\docs\\release\\Install-Uninstall-TestReport-1.0.1.md",
+                      "Length":  541
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\base.py",
+                      "Length":  309
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\router.py",
+                      "Length":  2269
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\__init__.py",
+                      "Length":  61
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\com\\engine.py",
+                      "Length":  2299
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\com\\session.py",
+                      "Length":  2491
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\com\\__init__.py",
+                      "Length":  121
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\com\\__pycache__\\engine.cpython-311.pyc",
+                      "Length":  5249
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\com\\__pycache__\\session.cpython-311.pyc",
+                      "Length":  4649
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\com\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  326
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\dataframe\\engine.py",
+                      "Length":  2100
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\dataframe\\__init__.py",
+                      "Length":  67
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\dataframe\\__pycache__\\engine.cpython-311.pyc",
+                      "Length":  4704
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\dataframe\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  260
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\hybrid\\engine.py",
+                      "Length":  1015
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\hybrid\\__init__.py",
+                      "Length":  61
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\hybrid\\__pycache__\\engine.cpython-311.pyc",
+                      "Length":  2336
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\hybrid\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  254
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\openxml\\engine.py",
+                      "Length":  3953
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\openxml\\__init__.py",
+                      "Length":  63
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\openxml\\__pycache__\\engine.cpython-311.pyc",
+                      "Length":  9067
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\openxml\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  256
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\__pycache__\\base.cpython-311.pyc",
+                      "Length":  918
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\__pycache__\\router.cpython-311.pyc",
+                      "Length":  3415
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\engines\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  247
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\excel_processor\\paths.py",
+                      "Length":  1332
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\excel_processor\\version.py",
+                      "Length":  217
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\excel_processor\\__init__.py",
+                      "Length":  193
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\excel_processor\\__pycache__\\paths.cpython-311.pyc",
+                      "Length":  3167
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\excel_processor\\__pycache__\\version.cpython-311.pyc",
+                      "Length":  426
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\excel_processor\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  362
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\installer\\ExcelProcessor.iss",
+                      "Length":  1748
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\LICENSES\\THIRD_PARTY_NOTICES.md",
+                      "Length":  208
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\builtin.py",
+                      "Length":  2063
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\registry.py",
+                      "Length":  1220
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\__init__.py",
+                      "Length":  243
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\application\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\application\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  143
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\chart\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\chart\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  137
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\connection\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\connection\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  142
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\data\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\data\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  136
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\format\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\format\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  138
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\formula\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\formula\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  139
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\generic_com\\executor.py",
+                      "Length":  2308
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\generic_com\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\generic_com\\__pycache__\\executor.cpython-311.pyc",
+                      "Length":  3838
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\generic_com\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  179
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\pivot\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\pivot\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  137
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\print\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\print\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  137
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\range\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\range\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  137
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\security\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\security\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  140
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\shape\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\shape\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  137
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\table\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\table\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  137
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\workbook\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\workbook\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  140
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\worksheet\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\worksheet\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  141
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\__pycache__\\builtin.cpython-311.pyc",
+                      "Length":  4218
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\__pycache__\\registry.cpython-311.pyc",
+                      "Length":  3100
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\operations\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  502
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\requirements\\build-legacy.lock",
+                      "Length":  293
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\requirements\\build-modern.lock",
+                      "Length":  293
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\requirements\\legacy-x64.lock",
+                      "Length":  572
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\requirements\\legacy-x86.lock",
+                      "Length":  572
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\requirements\\modern-x64.lock",
+                      "Length":  569
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\resources\\help.md",
+                      "Length":  319
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\resources\\operation_catalog.json",
+                      "Length":  5242
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\cancellation.py",
+                      "Length":  291
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\job_scheduler.py",
+                      "Length":  9060
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\recovery.py",
+                      "Length":  239
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\worker_manager.py",
+                      "Length":  340
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\worker_process.py",
+                      "Length":  1374
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\__init__.py",
+                      "Length":  139
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\__pycache__\\cancellation.cpython-311.pyc",
+                      "Length":  1069
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\__pycache__\\job_scheduler.cpython-311.pyc",
+                      "Length":  16419
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\__pycache__\\recovery.cpython-311.pyc",
+                      "Length":  934
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\__pycache__\\worker_manager.cpython-311.pyc",
+                      "Length":  768
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\__pycache__\\worker_process.cpython-311.pyc",
+                      "Length":  3162
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scheduler\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  340
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\bootstrap_build_env.ps1",
+                      "Length":  211
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\build_installer.ps1",
+                      "Length":  110
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\build_legacy_x64.ps1",
+                      "Length":  203
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\build_legacy_x86.ps1",
+                      "Length":  203
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\build_modern.ps1",
+                      "Length":  83
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\download_wheels.ps1",
+                      "Length":  241
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\generate_checksums.ps1",
+                      "Length":  254
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\generate_sbom.ps1",
+                      "Length":  322
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\smoke_test_install.ps1",
+                      "Length":  118
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\verify_hashes.ps1",
+                      "Length":  172
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\scripts\\vm_acceptance_matrix.ps1",
+                      "Length":  122
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\database.py",
+                      "Length":  7629
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\migrations\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\migrations\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  139
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\repositories\\jobs.py",
+                      "Length":  3656
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\repositories\\__init__.py",
+                      "Length":  61
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\repositories\\__pycache__\\jobs.cpython-311.pyc",
+                      "Length":  8971
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\repositories\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  259
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\__pycache__\\database.cpython-311.pyc",
+                      "Length":  13934
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\storage\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  164
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\compatibility\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\fault_injection\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\fixtures\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\integration\\test_dataframe_non_destructive.py",
+                      "Length":  1124
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\integration\\test_no_excel_degrades.py",
+                      "Length":  356
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\integration\\test_transaction_scheduler.py",
+                      "Length":  1573
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\integration\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\integration\\__pycache__\\test_dataframe_non_destructive.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  4924
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\integration\\__pycache__\\test_no_excel_degrades.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  2684
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\integration\\__pycache__\\test_transaction_scheduler.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  7613
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\integration\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  174
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\packaging\\test_packaging_files.py",
+                      "Length":  910
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\packaging\\__pycache__\\test_packaging_files.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  6973
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\regression\\test_migration_v1_0_0.py",
+                      "Length":  635
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\regression\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\regression\\__pycache__\\test_migration_v1_0_0.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  3722
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\regression\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  173
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_atomic_commit.py",
+                      "Length":  398
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_compatibility.py",
+                      "Length":  358
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_contracts.py",
+                      "Length":  788
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_database.py",
+                      "Length":  236
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_engine_decision.py",
+                      "Length":  502
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_error_policy.py",
+                      "Length":  456
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_generic_com_security.py",
+                      "Length":  362
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_router_registry.py",
+                      "Length":  729
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_runtime_paths.py",
+                      "Length":  367
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_state.py",
+                      "Length":  303
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\test_worker_protocol.py",
+                      "Length":  409
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_atomic_commit.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  3361
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_compatibility.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  2010
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_contracts.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  3986
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_database.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  2386
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_engine_decision.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  3222
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_error_policy.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  2869
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_generic_com_security.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  1240
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_router_registry.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  4868
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_runtime_paths.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  2101
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_state.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  1164
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\test_worker_protocol.cpython-311-pytest-9.0.3.pyc",
+                      "Length":  2840
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\unit\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  167
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\tests\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  162
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\backup.py",
+                      "Length":  283
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\commit.py",
+                      "Length":  2387
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\rollback.py",
+                      "Length":  365
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\workspace.py",
+                      "Length":  2375
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\__init__.py",
+                      "Length":  115
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\__pycache__\\backup.cpython-311.pyc",
+                      "Length":  731
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\__pycache__\\commit.cpython-311.pyc",
+                      "Length":  5000
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\__pycache__\\rollback.cpython-311.pyc",
+                      "Length":  997
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\__pycache__\\workspace.cpython-311.pyc",
+                      "Length":  5919
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\transaction\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  323
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\main_window.py",
+                      "Length":  1464
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\qt_compat.py",
+                      "Length":  998
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\dialogs\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\dialogs\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  131
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\models\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\models\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  130
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\pages\\__init__.py",
+                      "Length":  139
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\pages\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  285
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\widgets\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\widgets\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  131
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\__pycache__\\main_window.cpython-311.pyc",
+                      "Length":  3942
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\__pycache__\\qt_compat.cpython-311.pyc",
+                      "Length":  2300
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\ui\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  123
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\compatibility_validator.py",
+                      "Length":  678
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\data_validator.py",
+                      "Length":  341
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\file_validator.py",
+                      "Length":  875
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\object_validator.py",
+                      "Length":  240
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\report_builder.py",
+                      "Length":  1185
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\workbook_validator.py",
+                      "Length":  1948
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\__init__.py",
+                      "Length":  79
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\__pycache__\\compatibility_validator.cpython-311.pyc",
+                      "Length":  1326
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\__pycache__\\data_validator.cpython-311.pyc",
+                      "Length":  916
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\__pycache__\\file_validator.cpython-311.pyc",
+                      "Length":  2414
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\__pycache__\\object_validator.cpython-311.pyc",
+                      "Length":  1003
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\__pycache__\\report_builder.cpython-311.pyc",
+                      "Length":  2593
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\__pycache__\\workbook_validator.cpython-311.pyc",
+                      "Length":  3912
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\validation\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  263
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\dataframe_worker.py",
+                      "Length":  191
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_common.py",
+                      "Length":  1962
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\openxml_worker.py",
+                      "Length":  185
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_x64\\main.py",
+                      "Length":  199
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_x64\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_x64\\__pycache__\\main.cpython-311.pyc",
+                      "Length":  583
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_x64\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  145
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_x86\\main.py",
+                      "Length":  199
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_x86\\__init__.py",
+                      "Length":  0
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_x86\\__pycache__\\main.cpython-311.pyc",
+                      "Length":  583
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\excel_worker_x86\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  145
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\__pycache__\\dataframe_worker.cpython-311.pyc",
+                      "Length":  605
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\__pycache__\\excel_worker_common.cpython-311.pyc",
+                      "Length":  4174
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\__pycache__\\openxml_worker.cpython-311.pyc",
+                      "Length":  599
+                  },
+                  {
+                      "FullName":  "C:\\Users\\PC\\Desktop\\excel_processor\\workers\\__pycache__\\__init__.cpython-311.pyc",
+                      "Length":  128
+                  }
+              ],
+    "spdxVersion":  "SPDX-2.3"
+}
