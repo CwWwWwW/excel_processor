@@ -14,5 +14,5 @@ def main() -> int:
         from ui.main_window import run_app
         return run_app()
     except Exception as exc:
-        root=ensure_runtime_root(); report=write_crash_report(exc, root); print(f'?????????{exc}; crash_report={report}'); return 2
+        root=ensure_runtime_root(); report=write_crash_report(exc, root); print(f'Application startup failed: {exc}; crash_report={report}'); return 2
 if __name__ == '__main__': raise SystemExit(main())

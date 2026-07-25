@@ -27,7 +27,7 @@ begin
 end;
 function InitializeSetup(): Boolean;
 begin
-  if IsWin7WithoutSP1() then begin MsgBox('Windows 7 ???? SP1 ???? Excel Processor?', mbCriticalError, MB_OK); Result := False; end else Result := True;
+  if IsWin7WithoutSP1() then begin MsgBox('Windows 7 requires SP1 to install Excel Processor.', mbCriticalError, MB_OK); Result := False; end else Result := True;
 end;
 function IsX86(): Boolean; begin Result := not Is64BitInstallMode; end;
 function IsModern64(): Boolean; begin Result := Is64BitInstallMode and (GetWindowsVersion >= $0A004563); end;

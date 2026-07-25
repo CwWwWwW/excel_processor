@@ -15,7 +15,7 @@ class JobWorkspace:
         self.ensure(); source=file_spec.source_path.resolve(); source_hash=sha256_file(source); manifest=self.backup/f'{file_spec.file_id}.manifest.json'; backup_path=self.backup/f'{file_spec.file_id}_{source_hash[:12]}_{self._safe_name(source)}'; working_path=self.working/f'{file_spec.file_id}_{uuid4().hex}_{self._safe_name(source)}'
         if backup_path.exists():
             existing=json.loads(manifest.read_text(encoding='utf-8')) if manifest.exists() else {}
-            if existing.get('source_sha256') != source_hash: raise ValueError('???????????????????')
+            if existing.get('source_sha256') != source_hash: raise ValueError('Existing source backup hash does not match current source file')
         else:
             shutil.copy2(source, backup_path); manifest.write_text(json.dumps({'source_path':str(source),'source_sha256':source_hash,'backup_path':str(backup_path)}, ensure_ascii=False, indent=2), encoding='utf-8')
         shutil.copy2(source, working_path); return working_path

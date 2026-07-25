@@ -13,7 +13,7 @@ def _safe_save_workbook(wb, target: Path) -> None:
         wb.save(temp); wb.close()
         with zipfile.ZipFile(temp) as zf:
             bad=zf.testzip()
-            if bad: raise ValueError(f'OOXML ZIP ???{bad}')
+            if bad: raise ValueError(f'OOXML ZIP validation failed: {bad}')
         os.replace(temp, target)
     finally:
         if temp.exists():
@@ -25,7 +25,7 @@ class OpenXmlEngine:
     def execute(self, command: OperationCommand, context: ExecutionContext) -> OperationResult:
         started=time.perf_counter(); op=command.operation; wb=None
         try:
-            if command.working_path.suffix.lower() not in OOXML_EXTS: raise ValueError('OpenXML ????? OOXML ???')
+            if command.working_path.suffix.lower() not in OOXML_EXTS: raise ValueError('OpenXML engine supports only OOXML workbooks')
             from openpyxl import load_workbook
             if op.opcode=='SET_VALUE':
                 wb=load_workbook(command.working_path, keep_vba=_keep_vba(command.working_path)); ws=wb[command.resolved_sheet or (op.target.sheet_names or (wb.sheetnames[0],))[0]]; addr=op.target.address or op.parameters.get('address')
@@ -41,8 +41,8 @@ class OpenXmlEngine:
             if op.opcode=='COPY_TO_CANDIDATE' and command.output_path:
                 shutil.copy2(command.working_path, command.output_path)
                 return OperationResult(operation_id=op.operation_id, file_id=command.file_id, success=True, engine_used=EngineMode.OPENXML, affected_objects=1, duration_ms=int((time.perf_counter()-started)*1000))
-            if op.opcode=='SAVE_AS': raise ValueError('???? SAVE_AS ???? Excel COM')
-            raise ValueError(f'OpenXML ????????{op.opcode}')
+            if op.opcode=='SAVE_AS': raise ValueError('SAVE_AS requires Excel COM')
+            raise ValueError(f'OpenXML engine does not support operation: {op.opcode}')
         except Exception as exc:
             if wb is not None:
                 try: wb.close()

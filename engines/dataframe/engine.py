@@ -19,7 +19,7 @@ class DataFrameEngine:
                     delete_command=command.model_copy(update={'operation':delete_op, 'selected_engine':EngineMode.OPENXML, 'resolved_sheet': str(sheet) if not isinstance(sheet,int) else command.resolved_sheet})
                     result=OpenXmlEngine().execute(delete_command, context)
                     if not result.success: return result
-                return OperationResult(operation_id=op.operation_id, file_id=command.file_id, success=True, engine_used=EngineMode.DATAFRAME, affected_objects=before-int(keep_mask.sum()), warnings=('DataFrame ?????????????????????????',), duration_ms=int((time.perf_counter()-started)*1000))
-            raise ValueError(f'DataFrame ????????{op.opcode}')
+                return OperationResult(operation_id=op.operation_id, file_id=command.file_id, success=True, engine_used=EngineMode.DATAFRAME, affected_objects=before-int(keep_mask.sum()), warnings=('DataFrame calculated row changes and wrote them back without rebuilding the worksheet',), duration_ms=int((time.perf_counter()-started)*1000))
+            raise ValueError(f'DataFrame engine does not support operation: {op.opcode}')
         except Exception as exc:
             return OperationResult(operation_id=op.operation_id, file_id=command.file_id, success=False, engine_used=EngineMode.DATAFRAME, errors=(str(exc),), duration_ms=int((time.perf_counter()-started)*1000))

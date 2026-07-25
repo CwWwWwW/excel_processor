@@ -9,4 +9,8 @@ runtime/jobs/
 runtime/logs/
 runtime/crash_recovery/
 dist/
+wheelhouse/
+.build-env/
+pipcache/
+compatibility-results/*.local.json
 *.spec.backup

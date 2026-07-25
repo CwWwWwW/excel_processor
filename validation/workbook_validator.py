@@ -10,7 +10,7 @@ def validate_ooxml_container(path: Path) -> tuple[bool, str | None]:
             names=set(zf.namelist())
             required={'[Content_Types].xml','_rels/.rels'}
             missing=required-names
-            if missing: return False, f'OOXML ???????{sorted(missing)}'
+            if missing: return False, f'OOXML package is missing required parts: {sorted(missing)}'
             bad=zf.testzip()
             if bad: return False, f'OOXML ZIP ???{bad}'
         return True, None
@@ -23,7 +23,7 @@ def validate_openxml_reopen(path: Path) -> tuple[bool, str | None]:
     except Exception as exc: return False, str(exc)
 def validate_excel_com_reopen(path: Path, excel_installed: bool) -> tuple[bool, str | None]:
     if path.suffix.lower() not in COM_REQUIRED_EXTS: return True, None
-    if not excel_installed: return False, f'{path.suffix} ?? Excel COM ??????????? Excel'
+    if not excel_installed: return False, f'{path.suffix} requires Excel COM validation, but Excel is not installed'
     try:
         from engines.com.session import ExcelComSession
         workbook=None

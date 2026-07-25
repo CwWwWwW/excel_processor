@@ -11,36 +11,36 @@ def _unique_target(path: Path) -> Path:
     for idx in range(1,10000):
         candidate=parent/f'{stem}_{idx}{suffix}'
         if not candidate.exists(): return candidate
-    raise CommitError('???????????')
+    raise CommitError('Unable to allocate a unique output target')
 def _same_drive(a: Path, b: Path) -> bool:
     return a.resolve().drive.lower() == b.resolve().drive.lower()
 def atomic_commit(candidate: Path, final_path: Path, overwrite_policy: str='rename', backup_dir: Path | None=None, retries: int=5, delay: float=0.2) -> Path:
     final_path.parent.mkdir(parents=True, exist_ok=True)
-    if not candidate.exists(): raise CommitError('?????????')
-    if candidate.stat().st_size == 0: raise CommitError('????????')
+    if not candidate.exists(): raise CommitError('Candidate file does not exist')
+    if candidate.stat().st_size == 0: raise CommitError('Candidate file is empty')
     source_hash=sha256_file(candidate)
     target=final_path
     if target.exists():
-        if overwrite_policy == 'reject': raise CommitError(f'??????{target}')
+        if overwrite_policy == 'reject': raise CommitError(f'Output already exists: {target}')
         if overwrite_policy == 'rename': target=_unique_target(target)
         elif overwrite_policy == 'replace_after_backup':
             bdir=backup_dir or target.parent/'output_backup'; bdir.mkdir(parents=True, exist_ok=True); shutil.copy2(target, bdir/f'{uuid4().hex}_{target.name}')
-        else: raise CommitError(f'???????{overwrite_policy}')
+        else: raise CommitError(f'Unsupported overwrite policy: {overwrite_policy}')
     temp = target.with_name(f'.{target.name}.{uuid4().hex}.tmp')
     try:
         if _same_drive(candidate, target):
             shutil.copy2(candidate, temp)
         else:
             shutil.copy2(candidate, temp)
-        if sha256_file(temp) != source_hash: raise CommitError('??? SHA-256 ????')
+        if sha256_file(temp) != source_hash: raise CommitError('Committed file SHA-256 verification failed')
         last_error=None
         for _ in range(retries):
             try:
                 os.replace(temp, target); break
             except OSError as exc:
                 last_error=exc; time.sleep(delay); delay*=2
-        else: raise CommitError(f'???????{last_error}')
-        if sha256_file(target) != source_hash: raise CommitError('??? SHA-256 ????')
+        else: raise CommitError(f'Atomic replace failed: {last_error}')
+        if sha256_file(target) != source_hash: raise CommitError('Committed file SHA-256 verification failed')
         return target
     finally:
         if temp.exists():
