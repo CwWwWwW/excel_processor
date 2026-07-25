@@ -1,0 +1,42 @@
+{
+  "collected_at": "2026-07-25T03:24:42.977162+00:00",
+  "windows_version": "Windows-10-10.0.26200-SP0",
+  "windows_build": "10.0.26200",
+  "system_bitness": "AMD64",
+  "python": "3.11.15 (main, Apr 14 2026, 14:31:26) [MSC v.1944 64 bit (AMD64)]",
+  "excel": {
+    "schema_version": "1.0.1",
+    "installed": false,
+    "display_name": "Microsoft Excel not detected",
+    "support_level": "none",
+    "com_version": null,
+    "build": null,
+    "file_version": null,
+    "executable": null,
+    "operating_system": null,
+    "product_release_ids": null,
+    "version_to_report": null,
+    "platform": null,
+    "update_channel": null,
+    "msi_product_name": null,
+    "app_paths_executable": null,
+    "bitness": null,
+    "hwnd": null,
+    "process_id": null,
+    "error": "(-2147221005, '无效的类字符串', None, None)"
+  },
+  "tests": {
+    "open_workbook": "not_run",
+    "set_value": "not_run",
+    "delete_rows": "not_run",
+    "formula": "not_run",
+    "save": "not_run",
+    "save_as": "not_run",
+    "pdf": "not_run",
+    "xlsm_vba_preserved": "not_run",
+    "xlsb": "not_run",
+    "reopen_validation": "not_run",
+    "excel_process_residue": "not_run"
+  },
+  "result": "limited_no_excel"
+}

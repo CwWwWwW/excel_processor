@@ -1,0 +1,4 @@
+pyinstaller==6.4.0
+pip-tools==7.4.1
+wheel==0.45.1
+setuptools==75.3.2

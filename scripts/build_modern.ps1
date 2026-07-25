@@ -1,2 +1,2 @@
-$ErrorActionPreference='Stop'
-pyinstaller --noconfirm build/excel_processor.spec
+﻿$ErrorActionPreference='Stop'
+& (Join-Path $PSScriptRoot 'build_modern_x64.ps1')

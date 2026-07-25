@@ -1,3 +1,5 @@
-$ErrorActionPreference='Stop'
-Write-Host 'Run on Python 3.8 x64 build VM with requirements/legacy-x64.lock'
-pyinstaller --noconfirm build/excel_processor.spec --distpath dist/payload-legacy-x64-build
+﻿$ErrorActionPreference = 'Stop'
+$env:EXCEL_PROCESSOR_PAYLOAD_NAME = 'payload-legacy-x64'
+& '.build-env\legacy-x64\Scripts\python.exe' -m pytest
+& '.build-env\legacy-x64\Scripts\pyinstaller.exe' --noconfirm build/excel_processor.spec --distpath dist
+
