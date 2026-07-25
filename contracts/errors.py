@@ -21,6 +21,24 @@ class ErrorRecord(BaseModel):
     recoverable: bool = True
     created_at: datetime = Field(default_factory=datetime.now)
     details: dict[str, Any] = Field(default_factory=dict)
+class RowErrorContext(BaseModel):
+    model_config = ConfigDict(frozen=True)
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
+    sheet_name: str
+    row_number: int
+    record_key: str | None = None
+    column_name: str | None = None
+class FileExecutionState(BaseModel):
+    model_config = ConfigDict(frozen=True)
+    schema_version: str = CONTRACTS_SCHEMA_VERSION
+    file_id: UUID
+    skipped_sheets: set[str] = Field(default_factory=set)
+    skipped_operations: set[UUID] = Field(default_factory=set)
+    skipped_rows: dict[str, set[int]] = Field(default_factory=dict)
+    handled_errors: list[ErrorRecord] = Field(default_factory=list)
+    fatal_errors: list[ErrorRecord] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+    aborted: bool = False
 class ErrorDecision(BaseModel):
     model_config = ConfigDict(frozen=True)
     schema_version: str = CONTRACTS_SCHEMA_VERSION
@@ -41,3 +59,22 @@ class ErrorDecider:
             should_continue_sheet=policy not in {ErrorPolicy.STOP_JOB, ErrorPolicy.SKIP_FILE, ErrorPolicy.SKIP_SHEET},
             should_continue_operation=policy in {ErrorPolicy.CONTINUE, ErrorPolicy.SKIP_ROW},
         )
+    def apply(self, state: FileExecutionState, policy: ErrorPolicy, record: ErrorRecord) -> ErrorDecision:
+        decision = self.decide(policy, record)
+        if policy == ErrorPolicy.CONTINUE:
+            state.handled_errors.append(record)
+        else:
+            state.fatal_errors.append(record)
+        if policy == ErrorPolicy.SKIP_SHEET and record.sheet_name:
+            state.skipped_sheets.add(record.sheet_name)
+        if policy == ErrorPolicy.SKIP_OPERATION and record.operation_id:
+            state.skipped_operations.add(record.operation_id)
+        if policy == ErrorPolicy.SKIP_ROW:
+            sheet = record.sheet_name or "__workbook__"
+            row = record.details.get("row_number")
+            if row is not None:
+                state.skipped_rows.setdefault(sheet, set()).add(int(row))
+            state.handled_errors.append(record)
+        if not decision.should_continue_file:
+            state.aborted = True
+        return decision

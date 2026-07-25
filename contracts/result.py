@@ -5,7 +5,7 @@ from typing import Any
 from uuid import UUID, uuid4
 from pydantic import BaseModel, ConfigDict, Field, field_serializer
 from excel_processor.version import CONTRACTS_SCHEMA_VERSION
-from .job import EngineMode
+from .job import AtomicityMode, EngineMode
 class ChangeRecord(BaseModel):
     model_config = ConfigDict(frozen=True)
     schema_version: str = CONTRACTS_SCHEMA_VERSION
@@ -57,17 +57,30 @@ class TransactionRecord(BaseModel):
     transaction_id: UUID = Field(default_factory=uuid4)
     job_id: UUID
     file_id: UUID | None = None
-    stage: str
+    atomicity_mode: AtomicityMode = AtomicityMode.JOB
+    source_path: Path | None = None
+    backup_path: Path | None = None
+    working_path: Path | None = None
+    candidate_path: Path | None = None
+    committed_path: Path | None = None
+    original_output_backup: Path | None = None
+    source_sha256: str = ""
+    candidate_sha256: str | None = None
+    committed_sha256: str | None = None
+    state: str = ""
+    # Backward-compatible legacy fields kept for older DB rows and tests.
+    stage: str = ""
     path: Path | None = None
     sha256: str | None = None
     message: str = ""
-    @field_serializer("path")
+    @field_serializer("source_path", "backup_path", "working_path", "candidate_path", "committed_path", "original_output_backup", "path")
     def _path(self, v: Path | None) -> str | None: return None if v is None else str(v)
 class JobResult(BaseModel):
     model_config = ConfigDict(frozen=True)
     schema_version: str = CONTRACTS_SCHEMA_VERSION
     job_id: UUID
     success: bool
+    status: str | None = None
     artifacts: tuple[CandidateArtifact, ...] = ()
     reports: tuple[VerificationReport, ...] = ()
     warnings: tuple[str, ...] = ()

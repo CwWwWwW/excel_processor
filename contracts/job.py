@@ -10,6 +10,8 @@ class ErrorPolicy(StrEnum):
     STOP_JOB="stop_job"; SKIP_FILE="skip_file"; SKIP_SHEET="skip_sheet"; SKIP_OPERATION="skip_operation"; SKIP_ROW="skip_row"; CONTINUE="continue"
 class EngineMode(StrEnum):
     AUTO="auto"; EXCEL_COM="excel_com"; OPENXML="openxml"; DATAFRAME="dataframe"; HYBRID="hybrid"
+class AtomicityMode(StrEnum):
+    JOB="job"; FILE="file"
 class FileSpec(BaseModel):
     model_config = ConfigDict(frozen=True)
     schema_version: str = CONTRACTS_SCHEMA_VERSION
@@ -41,4 +43,5 @@ class JobSpec(BaseModel):
     operations: tuple["OperationSpec", ...]
     output: OutputSpec
     engine_mode: EngineMode = EngineMode.AUTO
+    atomicity_mode: AtomicityMode = AtomicityMode.JOB
     preview_only: bool = False

@@ -1,232 +1,3930 @@
 [
   {
-    "opcode": "SET_VALUE",
-    "chinese_name": "???",
+    "category": "media",
+    "chinese_name": "Add Comment",
+    "handler_class": "operations.builtin.EngineBackedHandler",
     "implemented": true,
-    "handler": "operations.builtin.EngineBackedHandler",
-    "parameter_schema": "value/address",
-    "target_schema": "TargetSpec.address",
-    "engines": [
+    "minimum_excel_version": "2007",
+    "opcode": "ADD_COMMENT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "validation",
+    "chinese_name": "Add Conditional Format",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "ADD_CONDITIONAL_FORMAT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "validation",
+    "chinese_name": "Add Data Validation",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "ADD_DATA_VALIDATION",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "name",
+    "chinese_name": "Add Defined Name",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "ADD_DEFINED_NAME",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "media",
+    "chinese_name": "Add Hyperlink",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "ADD_HYPERLINK",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Add Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "ADD_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "table",
+    "chinese_name": "Add Table Column",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "ADD_TABLE_COLUMN",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "table",
+    "chinese_name": "Add Table Row",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "ADD_TABLE_ROW",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Append Tables",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "APPEND_TABLES",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "format",
+    "chinese_name": "Apply Header Style",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "APPLY_HEADER_STYLE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Autofit Columns",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "AUTOFIT_COLUMNS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Autofit Rows",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "AUTOFIT_ROWS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Break Link",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "BREAK_LINK",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "formula",
+    "chinese_name": "Calculate Range",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "CALCULATE_RANGE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "formula",
+    "chinese_name": "Calculate Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "CALCULATE_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Calculate Workbook",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "CALCULATE_WORKBOOK",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "formula",
+    "chinese_name": "Check Formula Errors",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "CHECK_FORMULA_ERRORS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Clear Contents",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "CLEAR_CONTENTS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
       "hybrid",
       "openxml",
       "excel_com"
     ],
-    "formats": [
+    "supported_file_formats": [
       "xlsx",
       "xlsm",
-      "xltx",
-      "xltm",
       "xlsb",
       "xls"
     ],
-    "minimum_excel": "2007",
-    "required_members": [
-      "Range",
-      "Value2"
-    ],
-    "required_addins": [],
-    "required_permissions": [],
-    "preserves_vba": true,
-    "fidelity_level": "high",
-    "validators": [
-      "L1",
-      "L2",
-      "L3"
-    ],
+    "supports_skip_row": false,
     "tests": [
       "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
     ]
   },
   {
-    "opcode": "DELETE_ROWS",
-    "chinese_name": "???",
+    "category": "range",
+    "chinese_name": "Clear Formats",
+    "handler_class": "operations.builtin.EngineBackedHandler",
     "implemented": true,
-    "handler": "operations.builtin.EngineBackedHandler",
-    "parameter_schema": "idx/amount or rows",
-    "target_schema": "TargetSpec.sheet_names",
-    "engines": [
+    "minimum_excel_version": "2007",
+    "opcode": "CLEAR_FORMATS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "hybrid",
       "openxml",
       "excel_com"
     ],
-    "formats": [
+    "supported_file_formats": [
       "xlsx",
       "xlsm",
-      "xltx",
-      "xltm"
+      "xlsb",
+      "xls"
     ],
-    "minimum_excel": "2007",
-    "required_members": [
-      "Rows",
-      "Delete"
-    ],
-    "required_addins": [],
-    "required_permissions": [],
-    "preserves_vba": true,
-    "fidelity_level": "medium",
-    "validators": [
-      "L1",
-      "L2"
-    ],
+    "supports_skip_row": false,
     "tests": [
-      "tests/integration/test_transaction_scheduler.py"
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
     ]
   },
   {
-    "opcode": "DEDUP_DATA",
-    "chinese_name": "??????",
+    "category": "generic_com",
+    "chinese_name": "Com Call",
+    "handler_class": "operations.builtin.EngineBackedHandler",
     "implemented": true,
-    "handler": "operations.builtin.EngineBackedHandler",
-    "parameter_schema": "subset/header",
-    "target_schema": "TargetSpec.sheet_names",
-    "engines": [
-      "dataframe",
-      "openxml-writeback"
-    ],
-    "formats": [
-      "xlsx",
-      "xlsm"
-    ],
-    "minimum_excel": "2007",
-    "required_members": [],
-    "required_addins": [],
-    "required_permissions": [],
+    "minimum_excel_version": "2007",
+    "opcode": "COM_CALL",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
     "preserves_vba": true,
-    "fidelity_level": "medium",
-    "validators": [
-      "L1",
-      "L2",
-      "L4"
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
     ],
-    "tests": [
-      "tests/integration/test_dataframe_non_destructive.py"
-    ]
-  },
-  {
-    "opcode": "SAVE_AS",
-    "chinese_name": "???/????",
-    "implemented": true,
-    "handler": "operations.builtin.EngineBackedHandler",
-    "parameter_schema": "file_format",
-    "target_schema": "OutputSpec",
-    "engines": [
+    "requires_excel": true,
+    "supported_engines": [
       "excel_com"
     ],
-    "formats": [
+    "supported_file_formats": [
       "xlsx",
       "xlsm",
       "xlsb",
       "xls",
+      "xltx",
+      "xltm",
       "csv",
-      "pdf",
-      "xps"
+      "txt"
     ],
-    "minimum_excel": "2007",
-    "required_members": [
-      "SaveAs"
-    ],
-    "required_addins": [],
-    "required_permissions": [
-      "excel_com"
-    ],
-    "preserves_vba": false,
-    "fidelity_level": "high-with-excel",
-    "validators": [
-      "L1",
-      "L3",
-      "L6"
-    ],
+    "supports_skip_row": false,
     "tests": [
-      "tests/unit/test_engine_decision.py"
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
     ]
   },
   {
+    "category": "generic_com",
+    "chinese_name": "Com Get",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
     "opcode": "COM_GET",
-    "chinese_name": "?? COM ????",
-    "implemented": true,
-    "handler": "operations.generic_com.executor.execute_generic_com",
-    "parameter_schema": "member",
-    "target_schema": "TargetSpec.object_chain",
-    "engines": [
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
       "excel_com"
     ],
-    "formats": [
-      "all-excel-com"
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls",
+      "xltx",
+      "xltm",
+      "csv",
+      "txt"
     ],
-    "minimum_excel": "current member availability",
-    "required_members": [
-      "typelib whitelist"
-    ],
-    "required_addins": [],
-    "required_permissions": [
-      "advanced_com"
-    ],
-    "preserves_vba": true,
-    "fidelity_level": "current-typelib",
-    "validators": [
-      "audit"
-    ],
+    "supports_skip_row": false,
     "tests": [
-      "tests/unit/test_generic_com_security.py"
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
     ]
   },
   {
+    "category": "generic_com",
+    "chinese_name": "Com Set",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
     "opcode": "COM_SET",
-    "chinese_name": "?? COM ????",
-    "implemented": true,
-    "handler": "operations.generic_com.executor.execute_generic_com",
-    "parameter_schema": "member/value",
-    "target_schema": "TargetSpec.object_chain",
-    "engines": [
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
       "excel_com"
     ],
-    "formats": [
-      "all-excel-com"
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls",
+      "xltx",
+      "xltm",
+      "csv",
+      "txt"
     ],
-    "minimum_excel": "current member availability",
-    "required_members": [
-      "typelib whitelist"
-    ],
-    "required_addins": [],
-    "required_permissions": [
-      "advanced_com"
-    ],
-    "preserves_vba": true,
-    "fidelity_level": "current-typelib",
-    "validators": [
-      "audit"
-    ],
+    "supports_skip_row": false,
     "tests": [
-      "tests/unit/test_generic_com_security.py"
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
     ]
   },
   {
-    "opcode": "COM_CALL",
-    "chinese_name": "?? COM ????",
+    "category": "format",
+    "chinese_name": "Copy Format",
+    "handler_class": "operations.builtin.EngineBackedHandler",
     "implemented": true,
-    "handler": "operations.generic_com.executor.execute_generic_com",
-    "parameter_schema": "member/arguments",
-    "target_schema": "TargetSpec.object_chain",
-    "engines": [
+    "minimum_excel_version": "2007",
+    "opcode": "COPY_FORMAT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
       "excel_com"
     ],
-    "formats": [
-      "all-excel-com"
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
     ],
-    "minimum_excel": "current member availability",
-    "required_members": [
-      "typelib whitelist"
-    ],
-    "required_addins": [],
-    "required_permissions": [
-      "advanced_com"
-    ],
-    "preserves_vba": true,
-    "fidelity_level": "current-typelib",
-    "validators": [
-      "audit"
-    ],
+    "supports_skip_row": false,
     "tests": [
-      "tests/unit/test_generic_com_security.py"
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Copy Range",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "COPY_RANGE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Copy Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "COPY_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "chart_pivot",
+    "chinese_name": "Create Chart",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "CREATE_CHART",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "chart_pivot",
+    "chinese_name": "Create Pivot Table",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "CREATE_PIVOT_TABLE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "table",
+    "chinese_name": "Create Table",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "CREATE_TABLE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Dedup Data",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DEDUP_DATA",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": true,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Delete Cells",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_CELLS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "chart_pivot",
+    "chinese_name": "Delete Chart",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_CHART",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Delete Columns",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_COLUMNS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "hybrid",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "media",
+    "chinese_name": "Delete Comment",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_COMMENT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "validation",
+    "chinese_name": "Delete Conditional Format",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_CONDITIONAL_FORMAT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "validation",
+    "chinese_name": "Delete Data Validation",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_DATA_VALIDATION",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "name",
+    "chinese_name": "Delete Defined Name",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_DEFINED_NAME",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "media",
+    "chinese_name": "Delete Hyperlink",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_HYPERLINK",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "media",
+    "chinese_name": "Delete Image",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_IMAGE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "chart_pivot",
+    "chinese_name": "Delete Pivot Table",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_PIVOT_TABLE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Delete Rows",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_ROWS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "hybrid",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Delete Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "table",
+    "chinese_name": "Delete Table",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_TABLE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "table",
+    "chinese_name": "Delete Table Column",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_TABLE_COLUMN",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "table",
+    "chinese_name": "Delete Table Row",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "DELETE_TABLE_ROW",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Export Pdf",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "EXPORT_PDF",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": false,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Export Xps",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "EXPORT_XPS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": false,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Fill Down",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "FILL_DOWN",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Fill Empty",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "FILL_EMPTY",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": true,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "formula",
+    "chinese_name": "Fill Formula",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "FILL_FORMULA",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Fill Right",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "FILL_RIGHT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Filter Range",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "FILTER_RANGE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Find Replace",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "FIND_REPLACE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "formula",
+    "chinese_name": "Formulas To Values",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "FORMULAS_TO_VALUES",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Freeze Panes",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "FREEZE_PANES",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Group Aggregate",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "GROUP_AGGREGATE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Hide Columns",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "HIDE_COLUMNS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Hide Rows",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "HIDE_ROWS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Hide Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "HIDE_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Insert Cells",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "INSERT_CELLS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Insert Columns",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "INSERT_COLUMNS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "hybrid",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "media",
+    "chinese_name": "Insert Image",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "INSERT_IMAGE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Insert Rows",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "INSERT_ROWS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "hybrid",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Join Tables",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "JOIN_TABLES",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Merge Cells",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "MERGE_CELLS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Merge Columns",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "MERGE_COLUMNS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Move Range",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "MOVE_RANGE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Move Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "MOVE_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Open Workbook",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "OPEN_WORKBOOK",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Pivot Data",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "PIVOT_DATA",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Protect Workbook",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "PROTECT_WORKBOOK",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Refresh All",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "REFRESH_ALL",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "chart_pivot",
+    "chinese_name": "Refresh Pivot Table",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "REFRESH_PIVOT_TABLE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Remove Duplicates",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "REMOVE_DUPLICATES",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": true,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Remove Empty Columns",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "REMOVE_EMPTY_COLUMNS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Remove Empty Rows",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "REMOVE_EMPTY_ROWS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Rename Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "RENAME_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Replace Values",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "REPLACE_VALUES",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": true,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "table",
+    "chinese_name": "Resize Table",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "RESIZE_TABLE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Save As",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SAVE_AS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": false,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Save Workbook",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SAVE_WORKBOOK",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Set Active Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_ACTIVE_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "format",
+    "chinese_name": "Set Alignment",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_ALIGNMENT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "format",
+    "chinese_name": "Set Border",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_BORDER",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Set Column Width",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_COLUMN_WIDTH",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "format",
+    "chinese_name": "Set Date Format",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_DATE_FORMAT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Set Document Property",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_DOCUMENT_PROPERTY",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "format",
+    "chinese_name": "Set Fill",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_FILL",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "format",
+    "chinese_name": "Set Font",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_FONT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "formula",
+    "chinese_name": "Set Formula",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_FORMULA",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "formula",
+    "chinese_name": "Set Formula R1C1",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_FORMULA_R1C1",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "format",
+    "chinese_name": "Set Number Format",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_NUMBER_FORMAT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "format",
+    "chinese_name": "Set Percent Format",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_PERCENT_FORMAT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Set Print Area",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_PRINT_AREA",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Set Row Height",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_ROW_HEIGHT",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Set Value",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_VALUE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "hybrid",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Set Values",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_VALUES",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "hybrid",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Set Very Hidden",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SET_VERY_HIDDEN",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Sort Range",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SORT_RANGE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Split Column",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "SPLIT_COLUMN",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Transpose Data",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "TRANSPOSE_DATA",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Unfreeze Panes",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UNFREEZE_PANES",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Unhide Columns",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UNHIDE_COLUMNS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "rows_columns",
+    "chinese_name": "Unhide Rows",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UNHIDE_ROWS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "worksheet",
+    "chinese_name": "Unhide Sheet",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UNHIDE_SHEET",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "range",
+    "chinese_name": "Unmerge Cells",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UNMERGE_CELLS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "data",
+    "chinese_name": "Unpivot Data",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UNPIVOT_DATA",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [],
+    "requires_excel": false,
+    "supported_engines": [
+      "dataframe",
+      "openxml",
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Unprotect Workbook",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UNPROTECT_WORKBOOK",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "chart_pivot",
+    "chinese_name": "Update Chart Source",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UPDATE_CHART_SOURCE",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "name",
+    "chinese_name": "Update Defined Name",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UPDATE_DEFINED_NAME",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
+    ]
+  },
+  {
+    "category": "workbook",
+    "chinese_name": "Update Links",
+    "handler_class": "operations.builtin.EngineBackedHandler",
+    "implemented": true,
+    "minimum_excel_version": "2007",
+    "opcode": "UPDATE_LINKS",
+    "parameter_schema": {
+      "additionalProperties": true,
+      "type": "object"
+    },
+    "preserves_vba": true,
+    "required_com_members": [
+      "Workbooks",
+      "Worksheets",
+      "Range"
+    ],
+    "requires_excel": true,
+    "supported_engines": [
+      "excel_com"
+    ],
+    "supported_file_formats": [
+      "xlsx",
+      "xlsm",
+      "xlsb",
+      "xls"
+    ],
+    "supports_skip_row": false,
+    "tests": [
+      "tests/unit/test_router_registry.py"
+    ],
+    "validators": [
+      "handler.validate",
+      "handler.verify"
     ]
   }
 ]
