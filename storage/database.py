@@ -27,6 +27,9 @@ CREATE TABLE IF NOT EXISTS transaction_records (transaction_id TEXT PRIMARY KEY,
 CREATE INDEX IF NOT EXISTS idx_transaction_records_job ON transaction_records(job_id);
 CREATE INDEX IF NOT EXISTS idx_errors_job ON errors(job_id);
 """),
+('003_transaction_atomicity', """
+CREATE INDEX IF NOT EXISTS idx_transaction_records_file ON transaction_records(file_id);
+"""),
 )
 class Database:
     def __init__(self, path: Path) -> None:
@@ -46,6 +49,21 @@ class Database:
         cols={row[1] for row in conn.execute('PRAGMA table_info(jobs)')}
         for name, ddl in {'recovery_state':'TEXT','diagnostics_path':'TEXT','workspace_path':'TEXT'}.items():
             if name not in cols: conn.execute(f'ALTER TABLE jobs ADD COLUMN {name} {ddl}')
+        tx_cols={row[1] for row in conn.execute('PRAGMA table_info(transaction_records)')}
+        for name, ddl in {
+            'atomicity_mode':'TEXT',
+            'source_path':'TEXT',
+            'backup_path':'TEXT',
+            'working_path':'TEXT',
+            'candidate_path':'TEXT',
+            'committed_path':'TEXT',
+            'original_output_backup':'TEXT',
+            'source_sha256':'TEXT',
+            'candidate_sha256':'TEXT',
+            'committed_sha256':'TEXT',
+            'state':'TEXT',
+        }.items():
+            if name not in tx_cols: conn.execute(f'ALTER TABLE transaction_records ADD COLUMN {name} {ddl}')
     def table_names(self) -> set[str]:
         with self.connect() as conn: return {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}
     def integrity_check(self) -> bool:

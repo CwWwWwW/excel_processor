@@ -27,7 +27,28 @@ class JobRepository:
     def record_verification_report(self, report: VerificationReport) -> None:
         self.database.insert_json('verification_reports', {'report_id':str(report.report_id),'job_id':str(report.job_id),'file_id':str(report.file_id) if report.file_id else None,'schema_version':report.schema_version,'status':report.status.value,'payload_json':report.model_dump_json()})
     def record_transaction(self, record: TransactionRecord) -> None:
-        self.database.insert_json('transaction_records', {'transaction_id':str(record.transaction_id),'job_id':str(record.job_id),'file_id':str(record.file_id) if record.file_id else None,'schema_version':record.schema_version,'stage':record.stage,'path':str(record.path) if record.path else None,'sha256':record.sha256,'payload_json':record.model_dump_json()})
+        self.database.migrate()
+        self.database.insert_json('transaction_records', {
+            'transaction_id':str(record.transaction_id),
+            'job_id':str(record.job_id),
+            'file_id':str(record.file_id) if record.file_id else None,
+            'schema_version':record.schema_version,
+            'stage':record.stage or record.state,
+            'path':str(record.path or record.candidate_path or record.working_path or record.committed_path or record.source_path) if (record.path or record.candidate_path or record.working_path or record.committed_path or record.source_path) else None,
+            'sha256':record.sha256 or record.committed_sha256 or record.candidate_sha256 or record.source_sha256,
+            'atomicity_mode':record.atomicity_mode.value,
+            'source_path':str(record.source_path) if record.source_path else None,
+            'backup_path':str(record.backup_path) if record.backup_path else None,
+            'working_path':str(record.working_path) if record.working_path else None,
+            'candidate_path':str(record.candidate_path) if record.candidate_path else None,
+            'committed_path':str(record.committed_path) if record.committed_path else None,
+            'original_output_backup':str(record.original_output_backup) if record.original_output_backup else None,
+            'source_sha256':record.source_sha256,
+            'candidate_sha256':record.candidate_sha256,
+            'committed_sha256':record.committed_sha256,
+            'state':record.state or record.stage,
+            'payload_json':record.model_dump_json(),
+        })
     def get_payload(self, job_id: str) -> dict | None:
         with self.database.connect() as conn:
             row=conn.execute('SELECT payload_json FROM jobs WHERE job_id=?', (job_id,)).fetchone()
